@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank App Designer Packaged Web App Project Template</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/app.css">
+
+     <script src="../js/jquery.js"></script> 
+    <script src="../js/knockout.js"></script>
+    <script src="../js/izgubio.js"></script> 
+</head>
+
+
+<body>
+
+<div id="mainDiv">
+    <div class="form-group">
+        <label for="ime">Ime</label>
+        <input class="form-control" id="ime" data-bind="value: ime" placeholder="Unesite ime psa...">
+    </div>
+    <div class="form-group">
+        <label for="tezina">Tezina</label>
+        <input class="form-control" type="number" data-bind="value: tezina" placeholder="Unesite tezinu psa u kg...">
+    </div>
+    <div class="form-group">
+        <label for="rasa">Rasa</label>
+        <select class="form-control"  id="rasa" data-bind="options: rase, value: rasa" ></select>
+    </div>
+    <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input class="form-control" id="telefon" type="tel" data-bind="value: telefon" placeholder="Unesite telefon vlasnika...">
+    </div>
+    <div class="form-group">
+        <label for="telefon">Grad:</label>
+        <input class="form-control" id="grad" type="tel" data-bind="value: grad" placeholder="Unesite grad u kome je pas nestao...">
+    </div>
+    <div class="form-group">
+        <label for="opste">Info:</label>
+        <input class="form-control" id="info" type="text" data-bind="value: info" placeholder="Pas nestao 5tog sep u 4h ispred hale pionir...">
+    </div>
+    <div class="form-group">
+        <label for="slika1">Slika psa(1)</label>
+        <input type="file" id="slika1" data-bind="event:{change:uploadImage1}">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFile2">Slika psa(2)</label>
+        <input type="file" id="slika2" data-bind="event:{change:uploadImage2}">
+    </div>
+    <button type="submit" data-bind="click: $data.submit" class=" btn btn-default">Submit</button>
+</div>
+</body>
+</html>
